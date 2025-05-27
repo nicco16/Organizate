@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Organizadora</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Organizate</h2>
+      <div class="filters">
+        <button data-filter="all" class="active">Todas</button>
+        <button data-filter="pending">Pendientes</button>
+        <button data-filter="completed">Completadas</button>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+     <form id="task-form">
+  <input type="text" id="task-input" placeholder="Escribe una tarea..." required />
+  <input type="date" id="task-date" required />
+  <select id="task-project" required>
+    <option value="" disabled selected>Selecciona un proyecto</option>
+    <option value="Trabajo">Trabajo</option>
+    <option value="Personal">Personal</option>
+    <option value="Estudio">Estudio</option>
+  </select>
+  <button type="submit">Añadir</button>
+</form>
+
+      <ul id="task-list"></ul>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
